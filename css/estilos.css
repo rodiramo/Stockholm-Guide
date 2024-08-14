@@ -1,0 +1,2215 @@
+/* en este documento las media querys se encuentran al fin de esta pagina*/
+
+@font-face {
+  font-family: "rodrigues";
+  src: url("../fuentes/rodrigues_personal_use_only-webfont.woff2")
+      format("woff2"),
+    url("../fuentes/rodrigues_personal_use_only-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "caviar_dreamsregular";
+  src: url("../fuentes/caviardreams-webfont.woff2") format("woff2"),
+    url("../fuentes/caviardreams-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CaviarDreamsBold";
+  src: url("../fuentes/caviardreams_bold-webfont.woff2") format("woff2"),
+    url("../fuentes/caviardreams_bold-demo.html") format("html"),
+    url("../fuentes/caviardreams_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "cocogoose_prolight_italic";
+  src: url("../fuentes/cocogoose_pro_light_italic-trial-webfont.woff2")
+      format("woff2"),
+    url("../fuentes/cocogoose_pro_light_italic-trial-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*--resetear estilos--*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "caviar_dreamsregular";
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #000;
+  width: 120px;
+  background: #fff;
+  cursor: pointer;
+  height: 120px;
+  border-radius: 50%;
+  border: solid 2px #fff;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/*--x-resetear estilos--x-*/
+
+/*menu*/
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.menu a {
+  opacity: 1;
+  position: relative;
+}
+
+.menu a::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #f8bb51;
+  position: absolute;
+  top: -0.5em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+}
+
+.menu a:hover::before {
+  transform: scale(1, 1);
+}
+
+.logo a {
+  color: #ffffff !important;
+  font: normal 36px "rodrigues";
+  margin: 0;
+}
+
+.logo span {
+  color: #00a2ff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.5rem;
+}
+
+.logo span:hover {
+  color: #f8bb51;
+}
+
+.menu {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+.menu a:hover {
+  color: #00a2ff;
+}
+
+.menu-burger {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-burger div {
+  width: 25px;
+  background-color: aliceblue;
+  height: 2px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.toggle .linea1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .linea2 {
+  opacity: 0;
+}
+
+.toggle .linea3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*--x--menu cierre ---*/
+/*---formulario login-*/
+#login-formulario {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50px 0px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario-login-fondo {
+  width: 80%;
+  background: #00a2ff;
+  margin: 12% auto;
+  padding: 50px 0;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+#login-formulario h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-family: "rodrigues";
+}
+
+.input-caja {
+  margin: 31px auto;
+  width: 80%;
+  border-bottom: 1px solid #fff;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.input-caja input {
+  width: 90%;
+  color: #000;
+  outline: none;
+  background: transparent;
+}
+
+.input-caja input:hover {
+  box-shadow: none;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.conten-checkbox {
+  display: table;
+  width: 100%;
+  margin-top: 20px;
+  height: 100%;
+}
+
+.conten-checkbox .checkbox {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+label span {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  transform-origin: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  vertical-align: -6px;
+  margin-right: 10px;
+  transition: background-color 150ms 200ms,
+    transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
+}
+
+label span:before {
+  content: "";
+  width: 0px;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 13px;
+  left: 9px;
+  transition: width 50ms ease 50ms;
+  transform-origin: 0% 0%;
+}
+
+label span:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+  position: absolute;
+  transform: rotate(305deg);
+  top: 16px;
+  left: 10px;
+  transition: width 50ms ease;
+  transform-origin: 0% 0%;
+}
+
+label:hover span:before {
+  width: 5px;
+  transition: width 100ms ease;
+}
+
+label:hover span:after {
+  width: 10px;
+  transition: width 150ms ease 100ms;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + label span {
+  background-color: #fff;
+  transform: scale(1.25);
+}
+
+input[type="checkbox"]:checked + label span:after {
+  width: 10px;
+  background: #1790b5;
+  transition: width 150ms ease 100ms;
+}
+
+input[type="checkbox"]:checked + label span:before {
+  width: 5px;
+  background: #1790b5;
+  transition: width 150ms ease 100ms;
+}
+
+input[type="checkbox"]:checked + label:hover span {
+  background-color: #fff;
+  transform: scale(1.25);
+}
+
+input[type="checkbox"]:checked + label:hover span:after {
+  width: 10px;
+  background: #1790b5;
+  transition: width 150ms ease 100ms;
+}
+
+input[type="checkbox"]:checked + label:hover span:before {
+  width: 5px;
+  background: #1790b5;
+  transition: width 150ms ease 100ms;
+}
+
+/*-x--formulario login-x-*/
+/*video*/
+.video-fondo {
+  background: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.video,
+.video-fondo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video {
+  padding-bottom: 56px;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  max-height: 75vh;
+  margin-left: 100px;
+  margin-right: 100px;
+  height: calc((9 / 16) * 100vw);
+}
+
+.contenido-banner {
+  margin-top: 300px;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+}
+
+.informacion {
+  position: absolute;
+  width: 800px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border-radius: 10px;
+}
+
+.informacion p {
+  text-align: center;
+  padding-top: 20px;
+}
+
+/*----- divisor svg forma----*/
+.forma {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.forma svg {
+  position: relative;
+  display: block;
+  width: calc(106% + 1.3px);
+  height: 200px;
+}
+
+.forma .color-forma {
+  fill: #ffffff;
+}
+
+/* iconos Redes Sociales*/
+.iconos {
+  width: 50px;
+  position: fixed;
+  top: 50%;
+  opacity: 0.7;
+  left: 0;
+  padding-left: 15px;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+}
+
+a {
+  padding-bottom: 20px;
+}
+
+.redesSociales a:nth-child(1) {
+  background-image: url(../imagenes/twitter.png);
+  background-size: 40px;
+  padding-top: 60px;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+  color: transparent;
+  margin: 20px;
+}
+
+.redesSociales a:nth-child(1):hover {
+  background-image: url(../imagenes/twitterblanco.png);
+}
+
+.redesSociales a:nth-child(2) {
+  background-image: url(../imagenes/facebook.png);
+  background-size: 40px;
+  padding-top: 30px;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+  color: transparent;
+  margin: 20px;
+}
+
+.redesSociales a:nth-child(2):hover {
+  background-image: url(../imagenes/facebookblanco.png);
+}
+
+.redesSociales a:nth-child(3) {
+  background-image: url(../imagenes/youtube.png);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  color: transparent;
+  margin: 20px;
+}
+
+.redesSociales a:nth-child(3):hover {
+  background-image: url(../imagenes/youtubeblanco.png);
+}
+
+footer {
+  bottom: 0;
+}
+
+.footer-posicion {
+  background-color: #000;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  padding: 55px 50px;
+  margin-top: 80px;
+  display: flex;
+}
+
+.footer-posicion .footer-izquierda {
+  width: 40%;
+}
+
+.footer-posicion h3 {
+  color: #ffffff;
+  font: normal 36px "rodrigues";
+  margin: 0;
+}
+
+.footer-posicion h3 span {
+  color: #00a2ff;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.footer-posicion .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-posicion .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-posicion .footer-links a:hover {
+  color: #f8bb51;
+}
+
+.footer-posicion .copyright {
+  color: #f8bb51;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 30px;
+}
+
+.footer-posicion .footer-centro {
+  width: 35%;
+}
+
+.footer-posicion .footer-centro p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-posicion .footer-centro p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-posicion .footer-centro p a {
+  color: #5383d3;
+  text-decoration: none;
+}
+
+.footer-centro a {
+  font-size: 1rem;
+}
+
+.footer-posicion .footer-centro p a:hover {
+  color: #f8bb51;
+}
+
+.footer-posicion .footer-derecha {
+  width: 20%;
+}
+
+.footer-posicion .footer-info {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-posicion .footer-info span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/*-----verano-index----*/
+
+#verano-estocolmo {
+  margin: 100px;
+}
+
+#verano-estocolmo {
+  padding-top: 70px;
+}
+
+.contenido-ver {
+  display: flex;
+  justify-content: space-around;
+  margin: 100px;
+}
+
+.contenido-caja {
+  padding: 20px;
+  width: 50%;
+}
+
+.contenido-caja h3 {
+  font-family: "CaviarDreamsBold";
+  color: #fff;
+}
+
+.contenido-caja p {
+  color: #fff;
+}
+
+.display {
+  flex-direction: column;
+  justify-content: flex-end;
+  display: flex;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  transition: 200ms ease-in-out;
+}
+
+.display:hover {
+  background-size: 110%;
+  background-position: center;
+}
+
+.ver-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+    url(../imagenes/verano-actividad.jpg);
+}
+
+.ver-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+    url(../imagenes/verano-costa.jpg);
+}
+
+.ver-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+    url(../imagenes/verano-restaurante.jpg);
+}
+
+.estilo-linea {
+  width: 800px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  border-radius: 20px;
+  height: 3px;
+  background: #000;
+  display: block;
+}
+
+/*---sobre Estocolmo-----*/
+
+#sobreEstocolmo {
+  width: 100%;
+  height: 56vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 50px;
+  background-image: url(../imagenes/fondo-sobre-estocolmo.png);
+}
+
+#sobreEstocolmo button {
+  margin-right: 50px;
+}
+
+.columnas {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.contenido-sobre {
+  width: 30%;
+  margin-right: 200px;
+  text-align: right;
+}
+
+.slider {
+  margin-right: 50px;
+}
+
+.posicion-sobre {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/*-forma fondo-*/
+
+.forma-division {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.forma-division svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.forma-division .shape-fill {
+  fill: #000000;
+}
+
+/*--eventos-index--*/
+
+#eventos-index {
+  background: #000;
+  position: relative;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#eventos-index h2 {
+  text-align: center;
+  color: #f8bb51;
+  font-family: "rodrigues";
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+#eventos-index p {
+  color: #fff;
+  text-align: center;
+}
+
+#eventos-index h3 {
+  color: #00a2ff;
+  text-align: center;
+  margin: 5px 15px;
+}
+
+.contenedor-eventos {
+  margin-top: 5%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.contenido-eventos {
+  width: 25%;
+}
+
+.contenido-eventos a {
+  width: 80%;
+  margin: 0;
+}
+
+.contenido-eventos button {
+  margin-top: 5%;
+}
+
+/*-formulario index--*/
+
+.titulo-viaje {
+  text-align: center;
+  color: #fff;
+  margin: 80px 0 60px 0;
+}
+
+#viaje {
+  width: 100%;
+  margin-top: 8%;
+}
+
+#viaje .viaje-caja {
+  padding-top: 80px;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  padding: 20px 80px 100px 80px;
+  background: #000;
+  border-radius: 20px;
+}
+
+form {
+  background: #00a2ff;
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+label {
+  color: #000;
+  font-family: "CaviarDreamsBold";
+}
+
+input {
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  transition: 200ms ease-in-out;
+}
+
+input:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+select {
+  border-radius: 30px;
+  padding: 15px;
+  border: none;
+  transition: 200ms ease-in-out;
+}
+
+select:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.numero {
+  width: 15%;
+}
+
+.separacion {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.separacion input {
+  margin-left: 20px;
+}
+
+.separacion label {
+  margin-left: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.documento {
+  margin-bottom: 20px;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 50px;
+}
+
+::-webkit-file-upload-button {
+  color: #fff;
+  background: #00a2ff;
+  padding: 20px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+}
+
+.boton-form {
+  color: #fff;
+  background: #000;
+  font-size: 18px;
+  border-radius: 30px;
+  transition: 200ms ease-in-out;
+}
+
+.boton-form:hover {
+  color: #000;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/*---x---formulario index---x--*/
+
+/*---contacto---*/
+
+.fondo-contacto {
+  height: 100vh;
+  background: url(../imagenes/contacto-fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#formulario-contacto {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  width: 100%;
+  padding-bottom: 150px;
+  flex-direction: column;
+}
+
+#formulario-contacto h2 {
+  padding-bottom: 50px;
+  color: #f8bb51;
+  font-family: "rodrigues";
+  font-size: 3rem;
+  text-align: center;
+}
+
+#formulario-contacto button {
+  border-radius: 50%;
+  border: none;
+}
+
+.contacto-caja {
+  width: 60%;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 4px;
+  padding-left: 15px;
+  padding-top: 15px;
+  border: none;
+  outline: none;
+  transition: 200ms ease-in-out;
+}
+
+textarea:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.campo:required {
+}
+
+.campo:focus:invalid {
+  background-color: #c3c3c3;
+}
+
+#encontranos {
+  background: #000;
+  position: relative;
+  padding-bottom: 80px;
+  margin-bottom: 50px;
+}
+
+#encontranos h2 {
+  text-align: center;
+  color: #f8bb51;
+  padding-top: 50px;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  font-family: "rodrigues";
+}
+
+#encontranos a {
+  padding-bottom: 0px;
+}
+
+#encontranos h3 {
+  margin-bottom: 150px;
+  color: #fff;
+  text-align: center;
+}
+
+#encontranos .informacion-contacto a {
+  margin-top: 20px;
+  display: block;
+  margin-right: 150px;
+  padding-left: 30px;
+}
+
+address a {
+  color: #00a2ff;
+}
+
+address a:hover {
+  color: #f8bb51;
+}
+
+.informacion-contacto {
+  display: flex;
+  justify-content: center;
+}
+
+#encontranos .fondo-columna {
+  background-color: #00a2ff;
+  border-radius: 20px;
+  border-right: 60px solid #00a2ff;
+  border-bottom: 50px solid #00a2ff;
+  margin-bottom: 100px;
+  border-left: 0;
+}
+
+#encontranos .columna-img {
+  margin-right: 60px;
+  margin-bottom: 70px;
+  margin-left: -100px;
+  margin-top: -100px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.formulario-email {
+  width: 100%;
+}
+
+#encontranos .informacion-contacto a:nth-child(1) {
+  background: url(../imagenes/mail.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#encontranos .informacion-contacto a:nth-child(3) {
+  background: url(../imagenes/direccion.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+#encontranos .informacion-contacto a:nth-child(5) {
+  background: url(../imagenes/telefono.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+/*-----actividades seccion-----*/
+
+.ancho-pag {
+  margin: 0px 200px;
+}
+
+.contenedor-act {
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-act p {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+.contenedor-act a {
+  color: #00a2ff;
+  text-decoration-line: underline;
+  background-image: url(../imagenes/flecha.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 40px;
+  transition: 200ms ease-in-out;
+}
+
+.contenedor-act a:hover {
+  color: #f8bb51;
+  text-decoration-line: none;
+}
+
+.actividades-agua {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(../imagenes/fondo-agua.jpg);
+  background-size: 100%;
+  background-position: center;
+  margin-top: 50px;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  padding: 100px;
+  align-items: flex-end;
+}
+
+.actividades-agua h2 {
+  font-family: "rodrigues";
+  color: #f8bb51;
+  font-size: 2.5rem;
+}
+
+.actividades-agua p,
+h2 {
+  margin-right: 120px;
+}
+
+.ver-4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)),
+    url(../imagenes/fondo-agua1.jpg);
+}
+
+.ver-5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)),
+    url(../imagenes/fondo-agua2.jpg);
+}
+
+.ver-6 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)),
+    url(../imagenes/fondo-agua3.jpg);
+}
+
+.actividades-agua p {
+  text-align: right;
+  width: 50%;
+  margin-top: 50px;
+}
+
+.contenido-caja p {
+  width: 100%;
+}
+
+.contenido-caja h3 {
+  text-align: right;
+}
+
+.actividades-distritos {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.actividades-distritos p {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+/*---eventos---*/
+
+.eventos-elegido {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url(../imagenes/eventos-fags.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  padding: 60px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.eventos-elegido h2 {
+  color: #fff;
+  font-family: "rodrigues";
+  font-size: 3rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.eventos-elegido p {
+  margin-bottom: 20px;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.eventos-elegido h5 {
+  margin-bottom: 20px;
+}
+
+.eventos-varios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+#eventos-sec {
+  position: relative;
+}
+
+#eventos-sec h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.eventos-cajas {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.evento-info {
+  width: 400px;
+  height: 400px;
+  margin-right: 20px;
+  padding: 24px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 200ms ease-in-out;
+}
+
+.evento-info:hover {
+  transform: translateY(15px);
+}
+
+.evento-info:hover::before {
+  opacity: 1;
+}
+
+.evento-info:hover .evento-texto {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.evento-texto a {
+  color: #f8bb51;
+}
+
+.evento-texto a:hover {
+  color: #00a2ff;
+}
+
+.evento-info:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #000, transparent);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.evento-info img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.evento-info .evento-texto {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.6s;
+}
+
+.galeria {
+  margin-top: 50px;
+}
+
+#eventos-todos {
+  background-color: #000;
+  width: 100%;
+  padding-bottom: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+#eventos-todos h2 {
+  font-family: "rodrigues";
+  color: #f8bb51;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  font-size: 3rem;
+}
+
+.img-even {
+  height: 300px;
+}
+
+.caja-res-eve {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-even {
+  width: 50%;
+  margin-left: 50px;
+}
+
+.info-even h4 {
+  color: #00a2ff;
+  font-family: "cocogoose_prolight_italic";
+  font-size: 0.7rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.info-even a {
+  color: #f8bb51;
+  font-size: 0.8rem;
+}
+
+.info-even a:hover {
+  color: #00a2ff;
+  text-decoration-line: underline;
+}
+
+.columnas-even {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/*--galeria--*/
+.galeria-posicion {
+  width: 100%;
+  display: flex;
+}
+
+.galeria-contenedor {
+  width: 100%;
+  max-width: 120rem;
+}
+
+.texto-posicion {
+  margin-top: 50px;
+}
+
+.img-galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  grid-template-areas: "img1 img2 img3 img3" "img1 img8 img6 img7" "img5 img5 img4 img7";
+}
+
+.img-galeria a {
+  width: 100%;
+  height: 15rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-galeria a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  transition: opacity 0.5s;
+  height: 100%;
+}
+
+.img-galeria a:hover::before {
+  opacity: 1;
+}
+
+.img1 {
+  grid-area: img1;
+  min-height: 31.5rem;
+  background-image: url(../imagenes/galeria1.jpg);
+}
+
+.img2 {
+  grid-area: img2;
+  background-image: url(../imagenes/galeria2.jpg);
+}
+
+.img3 {
+  grid-area: img3;
+  background-image: url(../imagenes/galeria3.jpg);
+}
+
+.img4 {
+  grid-area: img4;
+  background-image: url(../imagenes/galeria4.jpg);
+}
+
+.img5 {
+  grid-area: img5;
+  background-image: url(../imagenes/galeria5.jpg);
+}
+
+.img6 {
+  grid-area: img6;
+  background-image: url(../imagenes/galeria6.jpg);
+}
+
+.img7 {
+  grid-area: img7;
+  min-height: 31.5rem;
+  background-image: url(../imagenes/galeria7.jpg);
+}
+
+.img8 {
+  grid-area: img8;
+  background-image: url(../imagenes/galeria8.jpg);
+}
+
+/*--x--eventos---x---*/
+
+/*---seccion sobre estocolmo----*/
+
+#origen-Estocolmo {
+  width: 100%;
+  background-image: url(../imagenes/fondo-historia.png);
+  padding-top: 20px;
+  padding-bottom: 100px;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: right;
+}
+
+#origen-Estocolmo p {
+  width: 45%;
+  margin-left: 100px;
+}
+
+#origen-Estocolmo h2 {
+  margin-left: 100px;
+  font-family: "rodrigues";
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#origen-Estocolmo h3 {
+  margin-left: 100px;
+  font-size: 1rem;
+  color: #00a2ff;
+  margin-bottom: 50px;
+}
+
+#historia-estocolmo {
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../imagenes/fondo-vikingo.jpg);
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+}
+
+#historia-estocolmo h2 {
+  margin-left: 100px;
+  text-align: center;
+  font-size: 3rem;
+  color: #f8bb51;
+  font-family: "rodrigues";
+  margin-bottom: 50px;
+}
+
+#historia-estocolmo p {
+  margin-left: 100px;
+  margin-right: 100px;
+  align-items: center;
+  text-align: center;
+}
+
+#estocolmo-moderno {
+  margin-top: 100px;
+}
+
+#estocolmo-moderno h2 {
+  color: #00a2ff;
+  font-family: "rodrigues";
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+#estocolmo-moderno h3 {
+  color: #f8bb51;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.gracias {
+  display: block;
+  margin: 20%;
+  color: #f8bb51;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+#grac {
+  background: #000;
+}
+
+.gracias h1 {
+  font-family: "rodrigues";
+}
+
+/*----media----*/
+
+/*menu*/
+
+@media screen and (max-width: 1325px) {
+  .menu {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .menu {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    transform: translateX(100%);
+    transition: 0.5s ease-in-out;
+  }
+
+  .menu li {
+    opacity: 0;
+    height: 100%;
+    padding-top: 20px;
+  }
+
+  .menu-burger {
+    display: block;
+  }
+}
+
+.nav-activacion {
+  transform: translateX(0%);
+}
+
+@keyframes navMenu {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*header*/
+@media (min-aspect-ratio: 16/9) {
+  .video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  iframe {
+    display: none;
+  }
+
+  .video-fondo {
+    display: none;
+  }
+
+  #header {
+    margin-bottom: 20px;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    overflow: hidden;
+    background-image: url(../imagenes/fondo-banner.jpg);
+  }
+
+  .informacion {
+    width: 80%;
+    padding: 0.5rem;
+  }
+
+  .informacion h1 {
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .forma svg {
+    width: calc(105% + 1.3px);
+    height: 148px;
+  }
+}
+
+@media (max-width: 767px) {
+  .forma svg {
+    display: none;
+  }
+}
+
+/*formulario login*/
+
+@media screen and (max-width: 800px) {
+  #login-formulario {
+    flex-direction: column;
+  }
+
+  #login-formulario button {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+}
+
+/*iconos redes sociales*/
+
+@media all and (max-width: 768px) {
+  .redesSociales a:nth-child(1) {
+    background-size: 30px;
+    margin: 10px 0;
+  }
+
+  .redesSociales a:nth-child(2) {
+    background-size: 30px;
+    margin: 10px 0;
+  }
+
+  .redesSociales a:nth-child(3) {
+    background-size: 30px;
+    margin: 10px 0;
+  }
+}
+
+/*footer*/
+@media (max-width: 880px) {
+  .footer-posicion {
+    font: bold 14px sans-serif;
+    flex-direction: column;
+  }
+
+  .footer-posicion .footer-izquierda,
+  .footer-posicion .footer-centro,
+  .footer-posicion .footer-derecha {
+    width: 100%;
+    height: 63px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
+/* seccion verano index */
+@media all and (max-width: 1178px) {
+  .contenido-ver {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  #verano-estocolmo {
+    margin: 100px 50px 0px 50px;
+  }
+
+  #verano-estocolmo button {
+    margin-bottom: 50px;
+  }
+
+  .display {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contenido-caja {
+    margin: 0;
+    width: 100%;
+  }
+
+  .estilo-linea {
+    display: none;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #verano-estocolmo {
+    margin: 0;
+  }
+
+  .estilo-linea {
+    display: none;
+  }
+
+  #verano-estocolmo h2 {
+    margin: 20px;
+    text-align: center;
+  }
+
+  #verano-estocolmo p {
+    text-align: center;
+    margin: 50px;
+  }
+
+  .contenido-ver {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .display:hover {
+    background-size: cover;
+  }
+
+  .contenido-caja {
+    margin: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  button {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+/*forma division*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .forma-division svg {
+    width: calc(120% + 1.3px);
+    height: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .forma-division svg {
+    width: calc(179% + 1.3px);
+    height: 100px;
+  }
+}
+
+/*-x-forma fondo-x-*/
+@media all and (max-width: 1464px) {
+  .contenido-sobre {
+    text-align: right;
+    margin-right: 40px;
+    width: 600px;
+  }
+
+  .contenido-sobre h2 {
+    margin-left: 0;
+  }
+
+  #sobreEstocolmo {
+    background: #fff;
+  }
+}
+
+@media all and (max-width: 920px) {
+  #sobreEstocolmo {
+    background: #00a2ff;
+    color: #fff;
+  }
+  .contenido-sobre h2 {
+    color: #fff !important;
+  }
+  body {
+    width: 100%;
+  }
+
+  #sobreEstocolmo h2 {
+    color: #00a2ff;
+  }
+
+  #sobreEstocolmo button {
+    margin-right: 0px;
+    margin-top: 20px;
+  }
+
+  .columnas {
+    align-items: center;
+  }
+
+  .contenido-sobre {
+    text-align: center;
+    width: 80%;
+    margin-right: 0;
+  }
+
+  .posicion-sobre {
+    flex-direction: column-reverse;
+  }
+
+  .contenido-sobre h2 {
+    margin-bottom: 20px;
+  }
+}
+
+/*eventos index*/
+
+@media all and (max-width: 1200px) {
+  .contenedor-eventos {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contenido-eventos p {
+    margin-bottom: 10%;
+  }
+
+  #eventos-index {
+    width: 100%;
+  }
+
+  #eventos-index img {
+    width: 100%;
+  }
+
+  .contenido-eventos {
+    width: 80%;
+  }
+
+  #eventos-index h3 {
+    margin: 0px;
+    padding-bottom: 20px;
+  }
+}
+
+@media all and (max-width: 1600px) {
+  .contenedor-eventos {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #eventos-index img {
+    width: 100%;
+  }
+
+  .contenido-eventos {
+    width: 80%;
+    margin-right: 20px;
+  }
+}
+
+/*fomulario index*/
+
+@media all and (max-width: 920px) {
+  .separacion {
+    flex-direction: column;
+  }
+  .contacto-caja {
+    width: 80% !important;
+  }
+  .numero {
+    width: 50%;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  .separacion input {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  ::placeholder {
+    color: black !important;
+  }
+  .separacion label {
+    margin-left: 0px;
+  }
+
+  #viaje .viaje-caja {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/*formulario seccion */
+@media all and (max-width: 920px) {
+  .contacto-caja {
+    width: 100%;
+  }
+
+  #formulario-contacto h2 {
+    margin: 0;
+  }
+
+  #encontranos h3 {
+    margin-bottom: 20px;
+  }
+
+  #encontranos .informacion-contacto a {
+    margin-right: 50px;
+    width: 100%;
+  }
+
+  .caja-grosor {
+    width: 100%;
+  }
+
+  .documento {
+    width: 100%;
+  }
+
+  .formulario-email {
+    width: 100%;
+  }
+
+  .informacion-contacto {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .fondo-columna {
+    display: none;
+  }
+
+  #encontranos h2 {
+    margin: 0;
+  }
+
+  .columna-img {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .informacion-contacto a {
+    width: 80%;
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  #encontranos {
+    width: 100%;
+  }
+
+  address {
+    margin-bottom: 50%;
+  }
+
+  .informacion-contacto {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/*eventos*/
+
+@media all and (max-width: 920px) {
+  .eventos-varios {
+    margin: 0;
+    width: 100%;
+  }
+
+  .actividades-agua p,
+  h2 {
+    margin-right: 0;
+  }
+
+  #eventos-todos h2 {
+    margin: 0;
+  }
+
+  .info-even h4 {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #eventos-todos img {
+    width: 90%;
+    margin-left: 20px;
+  }
+
+  .eventos-elegido p {
+    margin-right: 10px;
+    margin-left: 50px;
+  }
+
+  .eventos-elegido h2 {
+    margin-left: 50px;
+  }
+
+  .eventos-elegido h4 {
+    margin-left: 50px;
+  }
+
+  .eventos-elegido h5 {
+    margin-left: 50px;
+  }
+
+  .actividades-distritos h2 {
+    margin-left: 30px;
+    color: #f8bb51;
+  }
+
+  .actividades-distritos p {
+    margin-left: 30px;
+  }
+
+  #eventos-todos {
+    padding: 20px;
+  }
+
+  .actividades-agua {
+    background-size: cover;
+    align-items: center;
+    padding: 50px 0;
+  }
+
+  .actividades-agua p {
+    text-align: center;
+    width: 90%;
+  }
+
+  .eventos-cajas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .evento-info {
+    margin: 20px 0;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .eventos-elegido {
+    background-size: cover;
+  }
+
+  .actividades-agua {
+    background-size: cover;
+    align-items: center;
+  }
+
+  .actividades-agua p {
+    text-align: center;
+    width: 90%;
+    margin: 0;
+  }
+
+  .contenedor-act {
+    flex-direction: column;
+    margin-top: 150px;
+
+    margin-bottom: 100px;
+  }
+
+  .contenedor-act img {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 760px) {
+  .columnas-even {
+    flex-direction: column;
+  }
+
+  .contenedor-act h2 {
+    margin-left: 30px;
+    color: #00a2ff;
+    font-family: "rodrigues";
+    font-size: 3rem;
+  }
+
+  .contenedor-act a {
+    margin-left: 30px;
+  }
+
+  .contenedor-act p {
+    margin-left: 30px;
+    margin-right: 0;
+  }
+
+  .info-even {
+    text-align: center;
+    margin-left: 0;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+/*galeria*/
+
+@media screen and (max-width: 1200px) {
+  .ancho-pag {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .texto-posicion {
+    margin-left: 20px;
+  }
+
+  .img-galeria {
+    grid-template-areas:
+      "img1 img1 img2 img2" "img1 img1 img3 img3" "img4 img4 img5 img5" "img6 img7 img7 img7"
+      "img8 img8 img8 img8";
+  }
+
+  .img-galeria a {
+    height: 10rem;
+  }
+
+  .ancho-pag {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .img1 {
+    min-height: 21.5rem;
+  }
+
+  .img7 {
+    min-height: 15rem;
+  }
+
+  .img6 {
+    min-height: 15rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .img-galeria {
+    grid-template-areas:
+      "img1 img1 img1 img1"
+      "img2 img2 img2 img2"
+      "img3 img3 img3 img3"
+      "img4 img4 img4 img4"
+      "img5 img5 img5 img5"
+      "img6 img6 img6 img6"
+      "img7 img7 img7 img7"
+      "img8 img8 img8 img8"
+      "img8 img8 img8 img8";
+  }
+
+  .img-galeria a,
+  .img1,
+  .img6,
+  .img7 {
+    height: 30rem;
+    min-height: 30rem;
+  }
+}
+
+/*Sobre Estocolmo*/
+
+@media screen and (max-width: 962px) {
+  #origen-Estocolmo {
+    background: #fff;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  #historia-estocolmo p {
+    margin-left: 30px;
+
+    margin-right: 30px;
+  }
+
+  #estocolmo-moderno {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  #historia-estocolmo h2 {
+    margin-left: 0px;
+  }
+
+  #origen-Estocolmo p {
+    width: 80%;
+
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #origen-Estocolmo {
+    background: #fff;
+  }
+
+  #origen-Estocolmo p {
+    margin-left: 50px;
+  }
+}
